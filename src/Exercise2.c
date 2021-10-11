@@ -19,7 +19,18 @@ int main(int argc, char *argv[]) {
 	int n = atoi(argv[1]);
 	int result;
 	//Your codes here
-	
+	//n is odd
+	if(n % 2 == 1) {
+		for(int i = n; i > 0; i - 2){
+			result += i;
+		}
+	}
+	//n is even
+	else if(n % 2 == 0){
+		for(int j = n; j > 0; j - 2){
+			result += j;
+		}
+	}
 	printf("%d", result);
 	return 0;
 }
