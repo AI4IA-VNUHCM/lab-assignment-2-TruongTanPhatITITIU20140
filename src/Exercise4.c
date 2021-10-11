@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
 	}
 	//gộp mảng
 	for(int a=0; a < argc; a++){
-		printf(" %d ",test_array[a]);
+		printf(" %d",test_array[a]);
 	}
 	return 0;
 }

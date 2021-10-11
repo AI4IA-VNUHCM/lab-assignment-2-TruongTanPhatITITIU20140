@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 	//neu n la so prime lon hon 2
 	if (testcase > 2)
 
-		printf (" %d", testcase);
+		printf (" %d ", testcase);
 	
 	return 0;
 }
