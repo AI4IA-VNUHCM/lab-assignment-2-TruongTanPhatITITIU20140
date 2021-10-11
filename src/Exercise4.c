@@ -12,6 +12,12 @@ Ex:
 #include <stdlib.h>
 #include <math.h>
 
+void swap(int *arr, int i, int j)
+{
+	int store = arr[i];
+	arr[i] = arr[j];
+	arr[j] = store;
+}
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
@@ -24,32 +30,23 @@ int main(int argc, char *argv[]) {
 	//Your codes here
 	int half = argc / 2;
 
-	//chia làm 2 phần	
+	//chia làm 2 phần
 	//sắp xếp bên trái
-	int temp;
-    for(int i = 0; i < half - 1; i++){
-        for(int j = i + 1; j < half/2; j++){
-            if(test_array[i] > test_array[j]){
-                // đổi vị trí
-                temp = test_array[i];
-                test_array[i] = test_array[j];
-                test_array[j] = temp;        
-            }
-        }
-		
-    }
+
+    for (int i = 0; i < half - 1; i++)
+	{
+		for (int j = i + 1; j < half; j++)
+		{
+			if (test_array[i] > test_array[j])
+				swap(test_array, i, j);
+		}
+	}
 	//sắp xếp bên phải
-	int temp2;
    for (int i = half ; i < argc - 1; i++)
 	{
 		for (int j = i + 1; j < argc ; j++)
 		{
-			if (test_array[i] < test_array[j])
-			{
-				int temp2 = test_array[i];
-				test_array[i] = test_array[j];
-				test_array[j] = temp2;
-			}
+			swap(test_array, i, j);
 		}
 	}
 	//gộp mảng
