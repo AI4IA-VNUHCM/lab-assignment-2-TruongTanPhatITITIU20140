@@ -23,10 +23,11 @@ int main(int argc, char *argv[]) {
 	}
 	//Your codes here
 	int half = argc / 2;
+
 	//chia làm 2 phần	
 	//sắp xếp bên trái
 	int temp;
-    for(int i = 0; i < half/2-1; i++){
+    for(int i = 0; i < half - 1; i++){
         for(int j = i + 1; j < half/2; j++){
             if(test_array[i] > test_array[j]){
                 // đổi vị trí
@@ -39,7 +40,7 @@ int main(int argc, char *argv[]) {
     }
 	//sắp xếp bên phải
 	int temp2;
-   for(int i = half ; i < argc - 1; i++)
+   for (int i = half ; i < argc - 1; i++)
 	{
 		for (int j = i + 1; j < argc ; j++)
 		{
