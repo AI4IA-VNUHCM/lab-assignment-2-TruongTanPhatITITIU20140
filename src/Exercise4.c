@@ -7,7 +7,7 @@ Ex:
 | Output: 2 7 8 9 5 2 1 0            |
 |____________________________________|
 */
-
+/*
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
@@ -38,19 +38,11 @@ int main(int argc, char *argv[]) {
     }
 	//sắp xếp bên phải
 	int temp2;
-    for(int i = k-1; i > k/2; k--){
-        for(int j = i - 1; j >k/2; j--){
-            if(test_array[i] < test_array[j]){
-                // Hoan vi 2 so a[i] va a[j]
-                temp2 = test_array[i];
-                test_array[i] = test_array[j];
-                test_array[j] = temp2;        
-            }
-        }
-    }
+   
 	//gộp mảng
 	for(int a=0; a < k-1; a++){
 		printf(" %d ",test_array[a]);
 	}
 	return 0;
 }
+*/
