@@ -45,7 +45,8 @@ int main(int argc, char *argv[]) {
    for (int i = half ; i < argc - 1; i++)
 	{
 		for (int j = i + 1; j < argc ; j++)
-		{
+		{   
+			if (test_array[i] < test_array[j])
 			swap(test_array, i, j);
 		}
 	}
