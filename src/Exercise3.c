@@ -6,10 +6,6 @@ ______________________________________
 | Output: 2 * 2 * 2 * 3              |
 |____________________________________|
 */
-#include <stdio.h>
-#include <conio.h>
-#include <math.h>
-#include <stdbool.h>
 
 #include <stdio.h>
 #include <stdlib.h>
