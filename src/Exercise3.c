@@ -20,6 +20,7 @@ int main(int argc, char *argv[]) {
 	{ 
 		printf(" %d *",2);
 		testcase = testcase /2;
+		
 	}
 	// loop for chia cho số từ 3 tới căn n (đk check số prime)
 	 for (int i = 3; i <= sqrt(testcase); i = i+2)
@@ -28,13 +29,15 @@ int main(int argc, char *argv[]) {
 		// in ra số prime chia hết cho n
         while (testcase % i == 0)
         {
-            printf(" %d", i);
-            testcase = testcase / i;
+            printf(" %d *", i);
+            testcase = testcase / i;			
         }
+
     }
 	//neu n la so prime lon hon 2
 	if (testcase > 2)
-        printf (" %d", testcase);
+
+		printf (" %d ", testcase);
 	
 	return 0;
 }
