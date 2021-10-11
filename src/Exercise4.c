@@ -7,10 +7,11 @@ Ex:
 | Output: 2 7 8 9 5 2 1 0            |
 |____________________________________|
 */
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+
 
 int main(int argc, char *argv[]) {
 	//testing variable, applying it to your algorithm for auto-evaluating
@@ -21,12 +22,12 @@ int main(int argc, char *argv[]) {
 		test_array[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-	int k = sizeof(test_array) / sizeof(test_array[0]);
+	int half = sizeof(test_array) / sizeof(test_array[0]);
 	//chia làm 2 phần	
 	//sắp xếp bên trái
 	int temp;
-    for(int i = 0; i < k/2-1; i++){
-        for(int j = i + 1; j < k/2; j++){
+    for(int i = 0; i < half/2-1; i++){
+        for(int j = i + 1; j < half/2; j++){
             if(test_array[i] > test_array[j]){
                 // đổi vị trí
                 temp = test_array[i];
@@ -38,11 +39,21 @@ int main(int argc, char *argv[]) {
     }
 	//sắp xếp bên phải
 	int temp2;
-   
+   for(int i = half; i < half*2 - 1; i++)
+	{
+		for (int j = i + 1; j < n; j++)
+		{
+			if (test_array[i] < test_array[j])
+			{
+				int temp2 = test_array[i];
+				test_array[i] = test_array[j];
+				test_array[j] = temp2;
+			}
+		}
+	}
 	//gộp mảng
-	for(int a=0; a < k-1; a++){
+	for(int a=0; a < argc; a++){
 		printf(" %d ",test_array[a]);
 	}
 	return 0;
 }
-*/
