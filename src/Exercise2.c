@@ -21,13 +21,13 @@ int main(int argc, char *argv[]) {
 	//Your codes here
 	//n is odd	
 	if(n % 2 != 0) {		
-		for(int i = 1; i <= n; i + 2){
+		for(int i = 1; i <= n; i += 2){
 			result = result * i;
 		}
 	}
 	//n is even
 	else if(n % 2 == 0) {
-		for(int j = 2; j <= n; j + 2){
+		for(int j = 2; j <= n; j += 2){
 			result = result * j;
 		}
 	}
