@@ -4,7 +4,7 @@ Sort the first half in increasing order and second half decreasing order
 Ex:
  ____________________________________
 | Input:  8 7 9 2 1 5 2 0            |
-| Output: 2 7 8 9 5 2 1 0            |
+| Output: 2 7 8 9 5 2 1 0 
 |____________________________________|
 */
 
@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 		test_array[i] = atoi(argv[i+1]);
 	}
 	//Your codes here
-	int half = sizeof(test_array) / sizeof(test_array[0]);
+	int half = argc / 2;
 	//chia làm 2 phần	
 	//sắp xếp bên trái
 	int temp;
@@ -39,9 +39,9 @@ int main(int argc, char *argv[]) {
     }
 	//sắp xếp bên phải
 	int temp2;
-   for(int i = half; i < half*2 - 1; i++)
+   for(int i = half ; i < argc - 1; i++)
 	{
-		for (int j = i + 1; j < n; j++)
+		for (int j = i + 1; j < argc ; j++)
 		{
 			if (test_array[i] < test_array[j])
 			{
@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
 		}
 	}
 	//gộp mảng
-	for(int a=0; a < argc; a++){
+	for(int a=0; a < argc; a++) {
 		printf(" %d",test_array[a]);
 	}
 	return 0;
